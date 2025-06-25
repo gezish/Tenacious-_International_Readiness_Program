@@ -54,9 +54,9 @@
 ## 🧰 Tools to support the project delivery and streamline communication
 
 - GitHub Projects for sprint progress, create issues and confirm deliveries  
-- Notion for chatbot flow design and docs  
+- Notion for flow design and docs  
 - Postman for quick API testing  
-- Slackbot for error notifications  
+- Slackbot for questions and answers, feedback, notifications  
 
 
 
