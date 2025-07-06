@@ -1,6 +1,6 @@
 # 🛍️ AI Shopping Assistant MVP
 
-A personalized e-commerce shopping assistant built with **LangChain + OpenAI GPT-4** that helps customers find and purchase products through natural conversation.
+A personalized e-commerce shopping assistant built with **LangChain + OpenAI GPT-4** (or local LLMs like Ollama) that helps customers find and purchase products through natural conversation.
 
 ## 🎯 Use Case
 
@@ -10,21 +10,37 @@ This MVP demonstrates how Agentic AI can transform the e-commerce shopping exper
 - Handling post-purchase support
 - Learning from user preferences and behavior
 
-## 🏗️ Architecture
+## 🏗️ Architecture & Agent Workflow
 
+The agentic workflow is designed to guide the user through a personalized shopping journey, as shown below:
+
+```mermaid
+flowchart TD
+    A["User starts chat"] --> B["Agent greets & asks needs"]
+    B --> C["Agent gathers preferences"]
+    C --> D["Agent searches product catalog"]
+    D --> E["Agent presents recommendations"]
+    E --> F{"User wants to compare/refine?"}
+    F -- Yes --> C
+    F -- No --> G["Agent offers tracking/support"]
 ```
-┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
-│   Web Interface │    │  Shopping Agent  │    │  Mock E-commerce│
-│   (FastAPI)     │◄──►│  (LangChain)     │◄──►│  APIs (FastAPI) │
-│   Port: 8000    │    │  + GPT-4         │    │  Port: 8001     │
-└─────────────────┘    └──────────────────┘    └─────────────────┘
-```
+
+**Workflow Steps:**
+1. **User starts chat:** The user initiates a conversation with the shopping assistant.
+2. **Agent greets & asks needs:** The agent welcomes the user and inquires about their shopping goals.
+3. **Agent gathers preferences:** The agent collects user preferences (e.g., category, budget, brand).
+4. **Agent searches product catalog:** The agent queries the product API for matching items.
+5. **Agent presents recommendations:** The agent displays top product options and details.
+6. **Decision loop:** If the user wants to compare or refine, the agent loops back to gather more preferences; otherwise, it proceeds.
+7. **Agent offers tracking/support:** After a decision, the agent helps with order tracking or support as needed.
+
+This agentic workflow enables a dynamic, context-aware, and goal-driven shopping experience, far beyond a simple prompt-based chatbot.
 
 ## 🚀 Quick Start
 
 ### Prerequisites
 - Python 3.8+
-- OpenAI API key
+- OpenAI API key **or** a local LLM (e.g., Ollama)
 - pip (Python package manager)
 
 ### 1. Clone and Setup
@@ -35,7 +51,7 @@ pip install -r requirements.txt
 # Copy environment template
 cp config.env.example .env
 
-# Edit .env file with your OpenAI API key
+# Edit .env file with your OpenAI API key (if using OpenAI)
 # OPENAI_API_KEY=your_actual_api_key_here
 ```
 
@@ -43,13 +59,13 @@ cp config.env.example .env
 ```bash
 python mock_apis.py
 ```
-This starts the mock backend services on port 8001.
+This starts the mock backend services on port 8001 (or your chosen port).
 
 ### 3. Start the Shopping Assistant
 ```bash
 python web_interface.py
 ```
-This starts the web interface on port 8000.
+This starts the web interface on port 8000 (or your chosen port).
 
 ### 4. Access the Application
 Open your browser and go to: `http://localhost:8000`
@@ -120,7 +136,7 @@ Assistant: [Displays past orders]
 
 ### Environment Variables
 ```bash
-# Required
+# Required for OpenAI
 OPENAI_API_KEY=your_openai_api_key_here
 
 # Optional (defaults to localhost:8001)
@@ -256,6 +272,7 @@ This project is for educational and demonstration purposes.
 
 - **LangChain** for the agent framework
 - **OpenAI** for GPT-4 language model
+- **Ollama** for local LLM support
 - **FastAPI** for the web framework
 - **Pydantic** for data validation
 
