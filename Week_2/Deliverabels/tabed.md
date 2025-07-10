@@ -1,4 +1,4 @@
-# Demo: Tabs on GitHub Pages
+# Wee_2: Deliveries
 
 <style>
 .tabs {
@@ -28,8 +28,8 @@
 </style>
 
 <div class="tabs">
-  <div class="tab-button active" onclick="showTab('tab1')">Tab 1</div>
-  <div class="tab-button" onclick="showTab('tab2')">Tab 2</div>
+  <div class="tab-button active" onclick="showTab('tab1')" style="Bold">Urgent Snapshot Update</div>
+  <div class="tab-button" onclick="showTab('tab2')" style="Bold">Tab 2</div>
   <div class="tab-button" onclick="showTab('tab3')">Tab 3</div>
 </div>
 
