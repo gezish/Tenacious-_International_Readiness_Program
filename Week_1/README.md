@@ -59,21 +59,21 @@ cp config.env.example .env
 ```bash
 python mock_apis.py
 ```
-This starts the mock backend services on port 8001 (or your chosen port).
+This starts the mock backend services on port 8015 (or your chosen port).
 
 ### 3. Start the Shopping Assistant
 ```bash
 python web_interface.py
 ```
-This starts the web interface on port 8000 (or your chosen port).
+This starts the web interface on port 8016 (or your chosen port).
 
 ### 4. Access the Application
-Open your browser and go to: `http://localhost:8000`
+Open your browser and go to: `http://localhost:8016`
 
 ## 🎮 How to Use
 
 ### Web Interface
-1. **Open the chat interface** at `http://localhost:8000`
+1. **Open the chat interface** at `http://localhost:8016`
 2. **Start chatting** with the shopping assistant
 3. **Try these example conversations**:
 
@@ -139,11 +139,11 @@ Assistant: [Displays past orders]
 # Required for OpenAI
 OPENAI_API_KEY=your_openai_api_key_here
 
-# Optional (defaults to localhost:8001)
-PRODUCT_API_BASE_URL=http://localhost:8001/api/products
-USER_API_BASE_URL=http://localhost:8001/api/users
-CHECKOUT_API_BASE_URL=http://localhost:8001/api/checkout
-ORDER_API_BASE_URL=http://localhost:8001/api/orders
+# Optional (defaults to localhost:8015)
+PRODUCT_API_BASE_URL=http://localhost:8015/api/products
+USER_API_BASE_URL=http://localhost:8015/api/users
+CHECKOUT_API_BASE_URL=http://localhost:8015/api/checkout
+ORDER_API_BASE_URL=http://localhost:8015/api/orders
 ```
 
 ### Mock Data
@@ -186,7 +186,7 @@ Assistant: [Shows order status]
 
 ## 🔍 API Documentation
 
-### Mock E-commerce APIs (Port 8001)
+### Mock E-commerce APIs (Port 8015)
 - `GET /api/products` - Search products
 - `GET /api/products/{id}` - Get product details
 - `GET /api/users/{id}` - Get user profile
@@ -195,7 +195,7 @@ Assistant: [Shows order status]
 - `GET /api/orders/{id}` - Get order details
 - `GET /api/orders/user/{id}` - Get user orders
 
-### Shopping Assistant APIs (Port 8000)
+### Shopping Assistant APIs (Port 8016)
 - `GET /` - Web interface
 - `POST /chat` - Chat endpoint
 - `WebSocket /ws` - Real-time chat
@@ -247,7 +247,7 @@ Solution: Install dependencies with `pip install -r requirements.txt`
 ```
 WebSocket connection failed
 ```
-Solution: Ensure both servers are running (ports 8000 and 8001).
+Solution: Ensure both servers are running (ports 8015 and 8016).
 
 ## 📊 Performance Metrics
 
