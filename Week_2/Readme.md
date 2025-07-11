@@ -1,6 +1,6 @@
 **Standup Coordinator**
 **Goal:** 
-    - To deliver four core deliverables and optionally propose a repeatable process.
+    To deliver four core deliverables and optionally propose a repeatable process.
 
 **Expected Deliverables Overview**
 
