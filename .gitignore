@@ -5,6 +5,9 @@ __pycache__/
 
 # C extensions
 *.so
+Week_1/venv
+Week_1/.env
+.envg
 
 # Distribution / packaging
 .Python
