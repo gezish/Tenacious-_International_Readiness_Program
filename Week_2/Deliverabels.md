@@ -5,6 +5,8 @@ Prepared by: Gezahegne Wondachew – **Standup Coordinator**
 <details>
   <summary> Urgent Tasks Update🚨</summary>
 
+ ### 📝 Very Urgent Tasks
+
   1. **T-106: Fix Login Button on Mobile** (@Sara)
       - **Status:** In Progress | Blocked by unclear repro steps.
       - **Action:** Sara to confirm steps with QA team ASAP.
@@ -24,6 +26,7 @@ Prepared by: Gezahegne Wondachew – **Standup Coordinator**
 <details>
 <summary>Full Weekly Plan Update – July 2025</summary>
 
+### 📝 This Week Plan Update
 
 | Task ID | Title                            | Status      | Owner   | Notes                                                  |
 |---------|----------------------------------|-------------|---------|--------------------------------------------------------|
@@ -49,7 +52,20 @@ Video Link here
 <details>
   <summary>Reflection Log</summary>
 
+### 📝 Reflection Log – Week 2
 
+#### What was unclear at first?
+- The current status of some tasks wasn't clear due to outdated Jira tickets and scattered Slack messages.
+- Some tasks were unassigned or lacked detailed notes.
+
+#### What helped you move forward?
+- Cross-referencing the task board with Slack updates helped piece together accurate statuses.
+- Prioritizing clarity over perfection allowed faster decision-making.
+
+#### How would you improve this process next week?
+- Implement a weekly template to standardize updates.
+- Encourage teammates to keep Jira more up-to-date.
+- Set a reminder for design handoffs to avoid delays like with T-102.
 
 </details>
 <details>

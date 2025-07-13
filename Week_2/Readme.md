@@ -11,3 +11,5 @@
 | **3**    | Simulated Team Standup Video     | 2–3 min video summarizing key updates & asking specific questions | Google Drive link       |
 | **4**    | Reflection Log                   | Reflect on what was unclear, how you moved forward, and improvements | Google Doc or Slide     |
 |**Bonus** | Repeatable Process Template    | Create a checklist/template for smoother future updates      | Google Doc or Slide     |
+
+**All deliveries of this challenge is found in Deliverabels file**
