@@ -46,7 +46,7 @@ Prepared by: Gezahegne Wondachew – **Standup Coordinator**
 
 <details>
 <summary>Simulated Team Standup Video </summary> 
-Video Link here
+https://drive.google.com/file/d/1h2HpOQhbZomIa_UChw09r07LVK6larM7/view?usp=sharing 
 </details>
 
 <details>
