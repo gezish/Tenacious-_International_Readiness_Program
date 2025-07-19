@@ -12,6 +12,7 @@ Week_1/venv
 Week_1/.env
 .env
 envs
+
 # Distribution / packaging
 .Python
 build/

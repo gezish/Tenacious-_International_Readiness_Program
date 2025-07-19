@@ -4,7 +4,7 @@ from typing import List, Optional, Dict
 mock_details = [
     {"user": "Gez", "user_type": "admin", "actions": 12, "date": "2025-07-10"},
     {"user": "Bob", "user_type": "client", "actions": 8, "date": "2025-07-14"},
-    {"user": "Eve", "user_type": "admin", "actions": 15, "date": "2025-07-13"},
+    {"user": "Eve", "user_type": "admin", "actions": 15, "date": "2025-07-12"},
 ]
 
 mock_summary = {

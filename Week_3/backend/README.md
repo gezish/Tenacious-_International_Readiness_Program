@@ -1,13 +1,60 @@
-### 📊 Backend API – Engagement Module
+# 📊 Engagement Module – Backend API
 
-#### 📌 Project Overview
-This API exposes the `/engagement` endpoint as part of a simulated client project. The goal is to deliver clean, filterable engagement analytics data in response to vague, shifting client requirements.
+## 👤 Author
+Gezahegne Wondachew  
+Week 3 – International Readiness Program
 
-#### 🚀 Features
-- `/engagement` API returns structured analytics data
-- Supports query filters for flexibility (date, user type, etc.)
-- Cleans and formats data for frontend use
-- Includes placeholder dummy data until database is integrated
+## 📌 Project Overview
+This backend API provides filterable engagement analytics for internal dashboards. It includes CSV data ingestion and export functionality, and summary statistics useful for visualization.
 
-#### 📨 Endpoint Example
+---
 
+## 🚀 Features
+
+### ✅ `/engagement` (GET)
+- Returns filtered engagement logs
+- Filters:
+  - `user_type`
+  - `from_date`, `to_date`
+- Includes:
+  - `summary`: aggregate metrics
+  - `details`: per-user logs
+
+### ✅ `/engagement/import` (POST)
+- Accepts `.csv` file
+- Parses and stores data into SQLite database
+
+### ✅ `/engagement/export` (GET)
+- Exports current filtered results as a downloadable `.csv` file
+
+---
+
+## 🧠 Engagement Log Fields
+- `user`, `user_type`, `actions`, `date`
+
+---
+
+## 🔄 Summary Metrics (Auto Calculated)
+- `active_users`
+- `engagement_score` (placeholder logic)
+- `avg_session_time` (based on action weight)
+
+---
+
+## 🧱 Tech Stack
+- FastAPI
+- SQLAlchemy + SQLite
+- CSV File Handling
+- Pydantic for validation
+- CORS enabled (for frontend integration)
+
+---
+
+## 🛠 Setup Instructions
+
+```bash
+cd backend
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+uvicorn main:app --reload
