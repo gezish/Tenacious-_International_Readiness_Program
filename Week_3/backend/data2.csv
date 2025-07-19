@@ -1,0 +1,4 @@
+user,user_type,actions,date
+Alice,admin,12,2025-07-10
+Bob,client,8,2025-07-14
+Eve,admin,15,2025-07-13
