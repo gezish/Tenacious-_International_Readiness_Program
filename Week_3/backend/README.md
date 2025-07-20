@@ -26,6 +26,7 @@ This backend API provides filterable engagement analytics for internal dashboard
 
 ### ✅ `/engagement/export` (GET)
 - Exports current filtered results as a downloadable `.csv` file
+- Sample data is avaliable of data folder
 
 ---
 
