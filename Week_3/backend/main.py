@@ -12,12 +12,19 @@ from database import SessionLocal, engine
 from models import EngagementLog, Base
 import crud
 import schemas
+from fastapi.middleware.cors import CORSMiddleware
 
 # DB setup
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
-
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Or restrict to ["http://localhost:3000"]
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 # Dependency
 def get_db():
     db = SessionLocal()
