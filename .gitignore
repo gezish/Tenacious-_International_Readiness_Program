@@ -11,6 +11,7 @@ Week_2_3
 Week_1/venv
 Week_1/.env
 .env
+Week_3/engagement-dashboard/node_modules/
 envs
 
 # Distribution / packaging

@@ -1,11 +1,11 @@
 from pydantic import BaseModel
-from datetime import date
+from datetime import datetime
 
 class EngagementEntry(BaseModel):
     user: str
     user_type: str
     actions: int
-    date: date
+    date: datetime
 
     class Config:
         orm_mode = True
